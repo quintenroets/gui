@@ -1,6 +1,6 @@
 # Gui
 
-Python interface for input functionality with GUI
+Python interface for user input functionality with GUI
 
 ## Installation
 
