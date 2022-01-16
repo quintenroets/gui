@@ -22,7 +22,7 @@ def ask(message, choices=None, options=None):
 
 
 def ask_choices(choices, options=None):
-    separator = "###"
+    separator = '###'
     options = {
         'separator': separator,
         'no-headers': None
