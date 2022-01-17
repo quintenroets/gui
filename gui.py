@@ -29,7 +29,7 @@ def ask_choices(choices, options=None):
     } | (options or {})
     items = ['--column=text', '--column=@font@'] + [v for c in choices for v in (c, 'Monospace 15')]
     res = run('list', args=items, options=options)
-    res = res and choices[res.split(separator)[0]]
+    res = res and res.split(separator)[0]
     return res
 
 
