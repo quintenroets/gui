@@ -9,10 +9,10 @@ def ask(message, choices=None, options=None):
         res = run('entry', options=options)
         res = res and res.strip()
     elif isinstance(choices, list):
-        res = ask_choices(choices)
+        res = ask_choices(choices, options=options)
     elif isinstance(choices, dict):
         res = ask_choices(
-            list(choices.keys())
+            list(choices.keys()), options=options
         )
         res = res and choices[res]
     else:
