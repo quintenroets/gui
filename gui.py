@@ -21,13 +21,17 @@ def ask(message, choices=None, options=None):
 
 
 def ask_choices(choices, options=None):
+    display_mapping = {
+        c[:100]: c for c in choices
+    }  # limit length of displayed options to prevent errors
     separator = "###"
     options = {"separator": separator, "no-headers": None} | (options or {})
     items = ["--column=text", "--column=@font@"] + [
-        v for c in choices for v in (c, "Monospace 15")
+        v for c in display_mapping for v in (c, "Monospace 15")
     ]
     res = run("list", args=items, options=options)
     res = res and res.split(separator)[0]
+    res = res and display_mapping[res]
     return res
 
 
