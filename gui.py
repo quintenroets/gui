@@ -9,7 +9,7 @@ def ask(message, choices=None, options=None):
     if choices is None:
         res = run("entry", options=options)
         res = res and res.strip()
-    elif isinstance(choices, list) or isinstance(choices, set):
+    elif any(isinstance(choices, valid) for valid in (list, set, tuple)):
         res = ask_choices(choices, options=options)
     elif isinstance(choices, dict):
         res = ask_choices(list(choices.keys()), options=options)
