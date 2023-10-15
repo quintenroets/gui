@@ -5,5 +5,5 @@ Python interface for user input functionality with GUI
 ## Installation
 
 ```shell
-pip install git+https://github.com/quintenroets/gui
+pip install quinten-gui
 ```

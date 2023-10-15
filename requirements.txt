@@ -1,2 +1,2 @@
-yad
 quinten-cli
+yad
