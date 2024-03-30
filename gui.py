@@ -44,7 +44,7 @@ def run(subcommand, args=None, options=None):
         "icon-theme": "Win11",
         "fontname": "Noto Sans 40",
     } | (options or {})
-    result = cli.get("yad", f"--{subcommand}", *args, options, check=False)
+    result = cli.capture_output("yad", f"--{subcommand}", *args, options, check=False)
     return result
 
 

@@ -1,2 +1,2 @@
-quinten-cli
+powercli
 yad

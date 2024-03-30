@@ -1,13 +1,13 @@
 [project]
 name = "quinten-gui"
-version = "0.1.1"
+version = "0.1.2"
 description = ""
 authors = [{name = "Quinten Roets", email = "qdr2104@columbia.edu"}]
 license = {text = "MIT"}
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-    "quinten-cli",
+    "powercli",
     "yad"
 ]
 
